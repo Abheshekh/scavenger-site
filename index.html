@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scavenger — Offline Duplicate File Cleaner</title>
+  <meta name="description" content="Scavenger finds exact duplicates, near-duplicates, and file versions on your device. 100% offline. Nothing deleted without your confirmation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="8" height="8" rx="1.5" fill="#4C8EF7"/>
+          <rect x="13" y="3" width="8" height="8" rx="1.5" fill="#4C8EF7" opacity="0.5"/>
+          <rect x="3" y="13" width="8" height="8" rx="1.5" fill="#4C8EF7" opacity="0.5"/>
+          <path d="M17 13v8M13 17h8" stroke="#4C8EF7" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-name">Scavenger</span>
+      </div>
+      <a class="nav-github" href="https://github.com/abheshekh/scavenger" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">v1.0.0 · 100% Offline</div>
+      <h1 class="hero-title">Clean up your storage.<br/>Nothing deleted without you.</h1>
+      <p class="hero-sub">Scavenger finds exact duplicates, near-duplicates, and file versions across your device. Every suggestion requires your explicit confirmation before anything is removed.</p>
+      <div class="hero-actions">
+        <a id="hero-cta" class="btn btn-primary" href="#download">Download Scavenger</a>
+        <a class="btn btn-ghost" href="#how-it-works">See how it works</a>
+      </div>
+      <p class="hero-note">Suggestions only — nothing deleted without your confirmation</p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="section" id="download">
+    <div class="section-inner">
+      <h2 class="section-title">Download</h2>
+      <p class="section-sub">Choose your platform</p>
+
+      <div class="download-grid">
+
+        <!-- Windows -->
+        <div class="download-card" id="card-windows">
+          <div class="card-header">
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-13.051-1.851"/>
+            </svg>
+            <span class="platform-name">Windows</span>
+            <span class="platform-badge active">Available</span>
+          </div>
+          <p class="card-desc">Windows 10 / 11 · x64</p>
+          <a class="btn btn-primary btn-full" href="https://github.com/abheshekh/scavenger/releases/latest/download/Scavenger_Setup_1.0.0.exe">
+            Download .exe
+            <span class="btn-meta">~45 MB</span>
+          </a>
+          <p class="card-version">Version 1.0.0</p>
+        </div>
+
+        <!-- Android -->
+        <div class="download-card" id="card-android">
+          <div class="card-header">
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.523 15.341a.95.95 0 01-.95.95H7.427a.95.95 0 01-.95-.95V9.01c0-.525.425-.95.95-.95h9.146c.525 0 .95.425.95.95v6.331zM7.5 5.25l-1.5-2.6M16.5 5.25l1.5-2.6M12 3v2.5M6 7.5h12v9a2 2 0 01-2 2H8a2 2 0 01-2-2v-9z"/>
+            </svg>
+            <span class="platform-name">Android</span>
+            <span class="platform-badge active">Available</span>
+          </div>
+          <p class="card-desc">Android 8.0+</p>
+          <!-- TODO: Replace href with actual APK / Play Store link when available -->
+          <a class="btn btn-primary btn-full" href="#" id="android-download-btn">
+            Download APK
+            <span class="btn-meta">Coming soon</span>
+          </a>
+          <p class="card-version">Version 1.0.0</p>
+        </div>
+
+        <!-- macOS -->
+        <div class="download-card card-soon" id="card-macos">
+          <div class="card-header">
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span class="platform-name">macOS</span>
+            <span class="platform-badge soon">Coming soon</span>
+          </div>
+          <p class="card-desc">macOS 12+ · Apple Silicon &amp; Intel</p>
+          <button class="btn btn-disabled btn-full" disabled>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Not yet available
+          </button>
+          <p class="card-version">In development</p>
+        </div>
+
+        <!-- Ubuntu -->
+        <div class="download-card card-soon" id="card-ubuntu">
+          <div class="card-header">
+            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.61 3.19a2.53 2.53 0 100 5.06 2.53 2.53 0 000-5.06zm-11.22 0a2.53 2.53 0 100 5.06 2.53 2.53 0 000-5.06zM12 8.25a2.53 2.53 0 100 5.06A2.53 2.53 0 0012 8.25zm5.61 4.06a2.53 2.53 0 100 5.06 2.53 2.53 0 000-5.06zm-11.22 0a2.53 2.53 0 100 5.06 2.53 2.53 0 000-5.06z"/>
+            </svg>
+            <span class="platform-name">Ubuntu</span>
+            <span class="platform-badge soon">Coming soon</span>
+          </div>
+          <p class="card-desc">Ubuntu 20.04+ · x64</p>
+          <button class="btn btn-disabled btn-full" disabled>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4"/>
+            </svg>
+            Not yet available
+          </button>
+          <p class="card-version">In development</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section section-alt" id="features">
+    <div class="section-inner">
+      <h2 class="section-title">What Scavenger finds</h2>
+      <p class="section-sub">Three levels of detection, all offline</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12h6m-3-3v6M3 12a9 9 0 1018 0A9 9 0 003 12z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Exact Duplicates</h3>
+          <p class="feature-desc">SHA-256 byte-level comparison. Catches renamed files, copies in different folders, and cloud sync duplicates.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+              <path d="M8 11h6M11 8v6"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Near-Duplicates</h3>
+          <p class="feature-desc">Perceptual hashing detects images and videos that look identical but differ in compression, format, or minor edits.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">File Versions</h3>
+          <p class="feature-desc">Fuzzy filename matching finds <code>report.pdf</code>, <code>report_v2.pdf</code>, <code>report_final.pdf</code> and groups them as versions.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">100% Offline</h3>
+          <p class="feature-desc">No network requests, no cloud uploads, no telemetry. Your files never leave your device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="how-it-works">
+    <div class="section-inner">
+      <h2 class="section-title">How it works</h2>
+      <p class="section-sub">Three steps, nothing automatic</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3 class="step-title">Scan a folder</h3>
+            <p class="step-desc">Point Scavenger at any folder. It indexes every file, computes hashes, and groups duplicates — all locally, all in seconds.</p>
+          </div>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3 class="step-title">Review suggestions</h3>
+            <p class="step-desc">Browse grouped results side-by-side. Select which copies to remove. Scavenger pre-selects the likely duplicates but you stay in control.</p>
+          </div>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3 class="step-title">Confirm &amp; delete</h3>
+            <p class="step-desc">Every deletion requires an explicit confirmation. Files are only removed after you approve — no auto-deletion, ever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="nav-name">Scavenger</span>
+        <span class="footer-version">v1.0.0</span>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:spyabhe@gmail.com" class="footer-link">spyabhe@gmail.com</a>
+        <a href="https://github.com/abheshekh/scavenger" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
