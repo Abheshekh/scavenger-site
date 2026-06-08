@@ -43,19 +43,4 @@
     }
   }
 
-  // Disable Android download button until link is provided
-  // TODO: Remove this block and update href in index.html when APK / Play Store link is ready
-  const androidBtn = document.getElementById('android-download-btn');
-  if (androidBtn) {
-    const href = androidBtn.getAttribute('href');
-    if (!href || href === '#') {
-      androidBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        // Replace button with a "link coming soon" tooltip briefly
-        const orig = androidBtn.textContent;
-        androidBtn.textContent = 'Link coming soon…';
-        setTimeout(() => { androidBtn.textContent = orig; }, 2000);
-      });
-    }
-  }
 })();
