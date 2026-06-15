@@ -179,7 +179,7 @@ code {
 }
 .btn-disabled:active { transform: none; }
 
-.btn-full { width: 100%; justify-content: center; }
+.btn-full { width: 100%; justify-content: center; flex-wrap: wrap; }
 
 .btn-meta {
   font-size: 11px;
