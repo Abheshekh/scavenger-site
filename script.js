@@ -31,13 +31,13 @@
     const labels = {
       windows: 'Download for Windows',
       android: 'Download for Android',
-      macos:   'Coming soon for macOS',
+      macos:   'Download for macOS',
       ubuntu:  'Coming soon for Ubuntu',
     };
     if (os && labels[os]) {
       cta.textContent = labels[os];
-      // If platform is coming soon, CTA scrolls to download section but dims
-      if (os === 'macos' || os === 'ubuntu') {
+      // Ubuntu is still coming soon — dim its CTA. macOS is now available.
+      if (os === 'ubuntu') {
         cta.style.opacity = '0.6';
       }
     }

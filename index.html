@@ -89,23 +89,34 @@
         </div>
 
         <!-- macOS -->
-        <div class="download-card card-soon" id="card-macos">
+        <div class="download-card" id="card-macos">
           <div class="card-header">
             <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
             <span class="platform-name">macOS</span>
-            <span class="platform-badge soon">Coming soon</span>
+            <span class="platform-badge active">Available</span>
           </div>
-          <p class="card-desc">macOS 12+ · Apple Silicon &amp; Intel</p>
-          <button class="btn btn-disabled btn-full" disabled>
-            <svg class="lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2"/>
-              <path d="M7 11V7a5 5 0 0110 0v4"/>
-            </svg>
-            Not yet available
-          </button>
-          <p class="card-version">In development</p>
+          <p class="card-desc">macOS 12+ · Apple Silicon &amp; Intel (universal)</p>
+          <a class="btn btn-primary btn-full" href="https://github.com/abheshekh/scavenger-site/releases/latest/download/Scavenger_macos_universal.dmg">
+            Download .dmg
+            <span class="btn-meta">~116 MB</span>
+          </a>
+          <details class="macos-help">
+            <summary>First time opening on macOS?</summary>
+            <p>Scavenger is a free, independently-built app, so macOS shows a one-time
+            security prompt on first launch. To open it:</p>
+            <ol>
+              <li>Drag <strong>Scavenger</strong> into your <strong>Applications</strong> folder.</li>
+              <li>Double-click it. If macOS says it "cannot be opened", click <strong>Done</strong>.</li>
+              <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to the
+              <strong>Security</strong> section, and click <strong>Open Anyway</strong> next to Scavenger.</li>
+              <li>On macOS 12–14 you can instead right-click the app → <strong>Open</strong> → <strong>Open</strong>.</li>
+            </ol>
+            <p>You only do this once. To scan folders outside your home directory, grant
+            <strong>Full Disk Access</strong> in System Settings → Privacy &amp; Security.</p>
+          </details>
+          <p class="card-version">Clean mode · Version 1.0.4</p>
         </div>
 
         <!-- Ubuntu -->
