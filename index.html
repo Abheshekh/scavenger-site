@@ -102,20 +102,9 @@
             Download .dmg
             <span class="btn-meta">~116 MB</span>
           </a>
-          <details class="macos-help">
-            <summary>First time opening on macOS?</summary>
-            <p>Scavenger is a free, independently-built app, so macOS shows a one-time
-            security prompt on first launch. To open it:</p>
-            <ol>
-              <li>Drag <strong>Scavenger</strong> into your <strong>Applications</strong> folder.</li>
-              <li>Double-click it. If macOS says it "cannot be opened", click <strong>Done</strong>.</li>
-              <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to the
-              <strong>Security</strong> section, and click <strong>Open Anyway</strong> next to Scavenger.</li>
-              <li>On macOS 12–14 you can instead right-click the app → <strong>Open</strong> → <strong>Open</strong>.</li>
-            </ol>
-            <p>You only do this once. To scan folders outside your home directory, grant
-            <strong>Full Disk Access</strong> in System Settings → Privacy &amp; Security.</p>
-          </details>
+          <button type="button" class="macos-help-btn" data-modal-open="macos-help-modal">
+            ⓘ First time opening on macOS?
+          </button>
           <p class="card-version">Clean mode · Version 1.0.4</p>
         </div>
 
@@ -238,6 +227,25 @@
       </div>
     </div>
   </footer>
+
+  <!-- macOS "first open" help modal -->
+  <div class="modal-overlay" id="macos-help-modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="macos-help-title">
+      <button type="button" class="modal-close" data-modal-close aria-label="Close">&times;</button>
+      <h3 id="macos-help-title">Opening Scavenger on macOS</h3>
+      <p>Scavenger is a free, independently-built app, so macOS shows a one-time
+      security prompt on first launch. To open it:</p>
+      <ol>
+        <li>Drag <strong>Scavenger</strong> into your <strong>Applications</strong> folder.</li>
+        <li>Double-click it. If macOS says it "cannot be opened", click <strong>Done</strong>.</li>
+        <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll to the
+        <strong>Security</strong> section, and click <strong>Open Anyway</strong> next to Scavenger.</li>
+        <li>On macOS 12–14 you can instead right-click the app → <strong>Open</strong> → <strong>Open</strong>.</li>
+      </ol>
+      <p>You only do this once. To scan folders outside your home directory, grant
+      <strong>Full Disk Access</strong> in System Settings → Privacy &amp; Security.</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

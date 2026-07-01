@@ -43,4 +43,32 @@
     }
   }
 
+  // ── Modal (macOS "first open" help) ──────────────────────────────────────
+  function openModal(id) {
+    const m = document.getElementById(id);
+    if (m) m.hidden = false;
+  }
+  function closeModal(m) { if (m) m.hidden = true; }
+
+  document.querySelectorAll('[data-modal-open]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openModal(btn.getAttribute('data-modal-open'));
+    });
+  });
+
+  document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+    // Click on the dimmed backdrop (but not the dialog) closes it.
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal(overlay);
+    });
+    const closeBtn = overlay.querySelector('[data-modal-close]');
+    if (closeBtn) closeBtn.addEventListener('click', function () { closeModal(overlay); });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay:not([hidden])').forEach(closeModal);
+    }
+  });
+
 })();
